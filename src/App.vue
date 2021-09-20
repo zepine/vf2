@@ -94,11 +94,10 @@ export default {
     title: '나의 타이틀',
     footer: '나의 푸터',
     group: null,
-    userId: 'Renfri-love',
+    userId: 'Renfri-lovely-girl',
     name: 'Emma Appleton',
     born: '1991',
-    imageUrl: 'https://static.wikia.nocookie.net/witcher/images/f/f1/Netflix_renfri_lovely.jpg',
-    userIdForRead: 'Renfri'
+    imageUrl: 'https://static.wikia.nocookie.net/witcher/images/f/f1/Netflix_renfri_lovely.jpg'
   }),
   watch: {
     group () {
