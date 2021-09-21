@@ -1,8 +1,8 @@
-## 개발 환경 설정
+# 개발 환경 설정
 
 앱 제작에 필요한 개발 환경 설정
 
-### 필수 프로그램 설치
+## 필수 프로그램 설치
 
 1. node.js 설치
      - 다운로드 : <https://nodejs.org/>
@@ -15,7 +15,7 @@
 3. vscode 설치
 다운로드 : <https://code.visualstudio.com/>
 
-### PowerShell 실행 정책 불러오기
+## PowerShell 실행 정책 불러오기
 
 출처 : [about_Execution_Policies](https://docs.microsoft.com/ko-kr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1) @Microsoft
 
@@ -32,7 +32,7 @@ CurrentUser    RemoteSigned
 LocalMachine       AllSigned
 ```
 
-### 실행 정책 변경
+## 실행 정책 변경
 
 ```PowerShell
 Set-ExecutionPolicy -ExecutionPolicy <PolicyName> -Scope <scope>
@@ -42,20 +42,20 @@ Set-ExecutionPolicy -ExecutionPolicy <PolicyName> -Scope <scope>
 
 > RemoteSigned : 로컬 스크립트 및 원격 서명된 스크립트 허용
 
-### 실행 정책 제거
+## 실행 정책 제거
 
 ```PowerShell
 set-executionPolicy -executionPolicy **undefined** -scope currentuser
 ```
 
-### 프로젝트 만들기
+## 프로젝트 만들기
 
 1. 폴더 만들기
 `mkdir <name>`
 2. 상기 폴더에 package.json 파일 만들기
 `npm init`
 
-### Node.JS 시작하기
+## Node.JS 시작하기
 
 - js 파일 실행하기
 
@@ -73,7 +73,7 @@ set-executionPolicy -executionPolicy **undefined** -scope currentuser
   - npm은 package.json 파일이 준비되어야만 모듈을 내려받아 활용할 수 있음.
   - 다시 말해, package.json 파일은 모듈 설치를 위한 필수 준비 작업. `node init`이 아님.
   
-### Vue CLI 설치
+## Vue CLI 설치
 
 1. vue-cli 설치
 `npm install -g @vue/cli`
@@ -87,7 +87,7 @@ set-executionPolicy -executionPolicy **undefined** -scope currentuser
 
 > 참고: CLI = Command-Line interface
 
-### git에 remote repository 추가(연동)하기
+## git에 remote repository 추가(연동)하기
 
 - qucik setup
 
@@ -111,7 +111,7 @@ git push -u origin main
 5. 추가가 제대로 됐는지 확인
 `git remote -v`
 
-### commit 오류
+## commit 오류
 
 commit 시 git 사용자 이메일과 이름을 설정하라는 오류 발생 시 아래 설정하기
 
@@ -120,7 +120,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
-### 다른 컴퓨터에서 remote repository 사용
+## 다른 컴퓨터에서 remote repository 사용
 
 1. remote repository 클론(clone)
 `git clone <repository URL>`
@@ -130,7 +130,7 @@ git config --global user.name "Your Name"
 3. 서버 실행(정상 작동 테스트)
 `npm run server`
 
-### VS CODE 에디터 설정
+## VS CODE 에디터 설정
 
 extension 설치
 
@@ -138,11 +138,11 @@ extension 설치
 2. git history 설치
 3. auto close tag, auto rename tag 설치
 
-### Router 알아보기 (SPA)
+## Router 알아보기 (SPA)
 
 SPA 개념을 활용 [more](https://eastflag.co.kr/fullstack-spa_definition/)
 
-### Vuetify 설치
+## Vuetify 설치
 
 - [Vuetify 홈페이지](https://vuetifyjs.com/en/getting-started/installation/)
 - bootstrap과 같은 기능을 하는 CSS framework
@@ -154,13 +154,13 @@ SPA 개념을 활용 [more](https://eastflag.co.kr/fullstack-spa_definition/)
 > 해결: vue 프로젝트 생성 시 vue 2 버전을 선택.
 > 초보자 주의: Vue/Cli의 버전은 vue의 버전이 아님.
 
-### UI
+## UI
 
 1. [App bars](https://vuetifyjs.com/en/components/app-bars/)
 2. [Footer](https://vuetifyjs.com/en/components/footer/)
 3. [Navigation Drawers](https://vuetifyjs.com/en/components/navigation-drawers/)
 
-### Components 활용하기
+## Components 활용하기
 
 1. App.vue
  `<menu-bar></menu-bar>`
@@ -188,18 +188,18 @@ SPA 개념을 활용 [more](https://eastflag.co.kr/fullstack-spa_definition/)
   // 외부 코드가 담긴 변수 MenuBar (pascal case or camel case)를 **kebab case**로 변환(menu-bar).
   // 이를 태그명으로 하여 원하는 위치에 삽입하면 끝.
   
-#### v-bind:의 약어는 :(colon)
+### v-bind:의 약어는 :(colon)
 
   1. App.vue) data 프로퍼티에 string 추가
   2. App.vue) 컴포넌트 태그에서 상기 string을 v-bind(or : 콜론) 함
   3. 컴포넌트 파일) 상기 컴포넌트 태그와 연결된 파일에 export, probs 2 v-bind 변수 삽입
   4. 컴포넌트 파일) template 영역의 원하는 위치에
 
-### 확장 메뉴 구현
+## 확장 메뉴 구현
 
 [Expansion Lists](https://vuetifyjs.com/en/components/lists/#expansion-lists) 코드 활용
 
-### Firebase 시작하기
+## Firebase 시작하기
 
 1. Google Firebase [계정 만들기](https://firebase.google.com/)
    1. 프로젝트 만들기
@@ -218,7 +218,7 @@ SPA 개념을 활용 [more](https://eastflag.co.kr/fullstack-spa_definition/)
       2. 프로젝트 초기화 `firebase init`
       기본 firebase 프로젝트 설정 및 기타 구성 설정, 프로젝트 디렉토리에 `firebase.json`(프로젝트 구성 정보), `.firebaserc`([프로젝트 별칭 저장](https://firebase.google.com/docs/cli?authuser=2#project_aliases)) 파일 생성
 
-### Firebase SDK 추가 [link](https://firebase.google.com/docs/web/setup?authuser=2#add-sdks-initialize)
+## Firebase SDK 추가 [link](https://firebase.google.com/docs/web/setup?authuser=2#add-sdks-initialize)
 
   1. Firebase SDK 추가
   `npm install firbase`
@@ -254,7 +254,7 @@ SPA 개념을 활용 [more](https://eastflag.co.kr/fullstack-spa_definition/)
   6. main.js에서 firebase, import 하기
   `import './plugins/firebase'`
 
-### 테스트 해보기
+## 테스트 해보기
 
    1. 전역객체로서 firebase가 잘 출력되는지 확인하기
    App.vue
@@ -281,7 +281,7 @@ SPA 개념을 활용 [more](https://eastflag.co.kr/fullstack-spa_definition/)
       }
       ```
 
-### Realtime Database 쓰고 읽기
+## Realtime Database 쓰고 읽기
 
 > 오류: Realtime Database 쓰고 읽기 안 됨. 해당 코드가 반영된 지점은 git에서 '오류지점'으로 검색. 이후 강의 파일로 덮어씌어 봤으나 동일 현상. 오류 나는 원인 찾기 중.
 > 해결: Firebase 개발 문서를 토대로 코드 변경.
