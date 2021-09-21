@@ -4,11 +4,16 @@
 			"path": "."
 		}
 	],
-	"settings": {},
+	"settings": {
+		"markdown.styles": [
+			"node_modules\\\\vscode-markdown-style\\\\preview\\\\github.css",
+			//"node_modules\\\\vscode-markdown-style\\\\preview\\\\light-default.css"
+			// "node_modules\\\\vscode-markdown-style\\\\preview\\\\dark-material.css",
+		],
+	},
 	"launch": {
 		"version": "0.2.0",
 		"configurations": [
-			
 			{
 				"name": "Launch Chrome",
 				"request": "launch",
