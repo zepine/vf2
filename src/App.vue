@@ -94,7 +94,7 @@ export default {
     title: '나의 타이틀',
     footer: '나의 푸터',
     group: null,
-    userId: 'Renfri-lovely-girl',
+    userId: 'Renfri007',
     name: 'Emma Appleton',
     born: '1991',
     imageUrl: 'https://static.wikia.nocookie.net/witcher/images/f/f1/Netflix_renfri_lovely.jpg'
@@ -106,14 +106,18 @@ export default {
   },
   mounted () {
     console.clear()
-    console.log(writeUserData)
-    console.log(readUserData)
+    console.log(
+      writeUserData,
+      readUserData,
+      listenUserData
+    )
   },
   methods: {
     save () {
       console.clear()
       console.log('==> \'DB 쓰기\'를 시도합니다~ <==')
       writeUserData(this.userId, this.name, this.born, this.imageUrl)
+      console.log(`User ID : ${this.userId}, Name : ${this.name}, Born : ${this.born}, Image URL : ${this.imageUrl}`)
     },
     read () {
       console.clear()

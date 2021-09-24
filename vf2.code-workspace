@@ -6,9 +6,9 @@
 	],
 	"settings": {
 		"markdown.styles": [
-			"node_modules\\\\vscode-markdown-style\\\\preview\\\\github.css",
-			//"node_modules\\\\vscode-markdown-style\\\\preview\\\\light-default.css"
-			// "node_modules\\\\vscode-markdown-style\\\\preview\\\\dark-material.css",
+			".vscode\\\\vscode-markdown-style\\\\preview\\\\github.css",
+			//".vscode\\\\vscode-markdown-style\\\\preview\\\\light-default.css"
+			// ".vscode\\\\vscode-markdown-style\\\\preview\\\\dark-material.css",
 		],
 	},
 	"launch": {
