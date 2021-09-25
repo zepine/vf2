@@ -3,47 +3,37 @@
     <v-app-bar app absolute color="primary" dark>
       <!-- app bar -->
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <site-title :ttl="title"></site-title> <!-- site-title : kebab case -->
+      <site-title :ttl="title"></site-title>
+      <!-- site-title : kebab case -->
       <v-spacer />
       <v-tooltip bottom>
-        <template v-slot:activator="{ on, attrs }">
+        <template v-slot:activaWtor="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>
-              mdi-magnify
-            </v-icon>
+            <v-icon> mdi-magnify </v-icon>
           </v-btn>
         </template>
         <span>Search</span>
       </v-tooltip>
       <v-tooltip bottom>
-
         <template v-slot:activator="{ on, attrs }">
           <v-btn @click="save" icon v-bind="attrs" v-on="on">
-            <v-icon>
-              mdi-check
-            </v-icon>
+            <v-icon> mdi-check </v-icon>
           </v-btn>
         </template>
         <span>Save</span>
       </v-tooltip>
       <v-tooltip bottom>
-
         <template v-slot:activator="{ on, attrs }">
           <v-btn @click="read" icon v-bind="attrs" v-on="on">
-            <v-icon>
-              mdi-read
-            </v-icon>
+            <v-icon> mdi-read </v-icon>
           </v-btn>
         </template>
         <span>Read</span>
       </v-tooltip>
       <v-tooltip bottom>
-
         <template v-slot:activator="{ on, attrs }">
           <v-btn @click="listen" icon v-bind="attrs" v-on="on">
-            <v-icon>
-              mdi-reload
-            </v-icon>
+            <v-icon> mdi-reload </v-icon>
           </v-btn>
         </template>
         <span>Listen</span>
@@ -66,24 +56,28 @@
       </v-list-item>
       <v-divider />
 
-      <site-menu /> <!-- menu -->
-
+      <site-menu />
+      <!-- menu -->
     </v-navigation-drawer>
 
-    <site-footer :ftr='footer' /> <!-- footer -->
+    <site-footer :ftr="footer" />
+    <!-- footer -->
 
     <v-main>
       <router-view />
     </v-main>
-
   </v-app>
 </template>
 
 <script>
-import siteTitle from './views/site/title.vue'
+import siteTitle from '.views/site/title.vue'
 import siteFooter from './views/site/footer.vue'
 import siteMenu from './views/site/menu.vue'
-import { writeUserData, readUserData, listenUserData } from './plugins/firebase.js'
+import {
+  writeUserData,
+  readUserData,
+  listenUserData
+} from './plugins/firebase.js'
 // Components registered under 'PascalCase' or 'camelCase' names have may be called however you like, except using 'snake_case'.
 
 export default {
@@ -97,7 +91,8 @@ export default {
     userId: 'Renfri007',
     name: 'Emma Appleton',
     born: '1991',
-    imageUrl: 'https://static.wikia.nocookie.net/witcher/images/f/f1/Netflix_renfri_lovely.jpg'
+    imageUrl:
+      'https://static.wikia.nocookie.net/witcher/images/f/f1/Netflix_renfri_lovely.jpg'
   }),
   watch: {
     group () {
@@ -106,27 +101,25 @@ export default {
   },
   mounted () {
     console.clear()
-    console.log(
-      writeUserData,
-      readUserData,
-      listenUserData
-    )
+    console.log(writeUserData, readUserData, listenUserData)
   },
   methods: {
     save () {
       console.clear()
-      console.log('==> \'DB 쓰기\'를 시도합니다~ <==')
+      console.log("==> 'DB 쓰기'를 시도합니다~ <==")
       writeUserData(this.userId, this.name, this.born, this.imageUrl)
-      console.log(`User ID : ${this.userId}, Name : ${this.name}, Born : ${this.born}, Image URL : ${this.imageUrl}`)
+      console.log(
+        `User ID : ${this.userId}, Name : ${this.name}, Born : ${this.born}, Image URL : ${this.imageUrl}`
+      )
     },
     read () {
       console.clear()
-      console.log('==> \'DB 읽기\'를 시도합니다~ <==')
+      console.log("==> 'DB 읽기'를 시도합니다~ <==")
       readUserData(this.userId)
     },
     listen () {
       console.clear()
-      console.log('==> \'DB 이벤트\'를 수신합니다~ <==')
+      console.log("==> 'DB 이벤트'를 수신합니다~ <==")
       listenUserData(this.userId)
     }
   }

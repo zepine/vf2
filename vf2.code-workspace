@@ -5,22 +5,6 @@
 		}
 	],
 	"settings": {
-		"markdown.styles": [
-			".vscode\\\\vscode-markdown-style\\\\preview\\\\github.css",
-			//".vscode\\\\vscode-markdown-style\\\\preview\\\\light-default.css"
-			// ".vscode\\\\vscode-markdown-style\\\\preview\\\\dark-material.css",
-		],
+		"emmet.showSuggestionsAsSnippets": true
 	},
-	"launch": {
-		"version": "0.2.0",
-		"configurations": [
-			{
-				"name": "Launch Chrome",
-				"request": "launch",
-				"type": "pwa-chrome",
-				"url": "http://localhost:8080",
-				"webRoot": "${workspaceFolder}"
-			}
-		]
-	}
 }
