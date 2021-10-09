@@ -60,7 +60,7 @@
       <!-- menu -->
     </v-navigation-drawer>
 
-    <site-footer :ftr="footer" />
+    <site-footer :ftr="footer" />;
     <!-- footer -->
 
     <v-main>
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import siteTitle from '.views/site/title.vue'
+import siteTitle from './views/site/title.vue'
 import siteFooter from './views/site/footer.vue'
 import siteMenu from './views/site/menu.vue'
 import {
